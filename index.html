@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site com APIs</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- CSS separado -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-950 text-gray-100">
+    <!-- Cabeçalho -->
+    <header class="bg-gray-900 border-b border-gray-800">
+        <div class="max-w-6xl mx-auto px-6 py-8 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-blue-500 rounded-2xl flex items-center justify-center text-2xl">🌐</div>
+                <h1 class="text-3xl font-semibold">Meu Site com APIs</h1>
+            </div>
+            <p class="text-gray-400 text-lg">3 seções • 3 APIs • Pastas separadas</p>
+        </div>
+    </header>
+
+    <div class="max-w-6xl mx-auto px-6 py-12">
+        
+        <!-- SEÇÃO 1: ViaCEP -->
+        <div class="mb-20">
+            <div class="section-header text-white rounded-3xl px-8 py-6 flex items-center gap-4 mb-6">
+                <div class="text-4xl">📬</div>
+                <div>
+                    <h2 class="text-3xl font-semibold">1. Busca de Endereço por CEP </h2>
+                    <p class="text-blue-200">ViaCEP</p>
+                </div>
+            </div>
+            
+            <div class="bg-gray-900 rounded-3xl p-8">
+                <div class="flex gap-4 max-w-md">
+                    <input id="cep-input" type="text" maxlength="8" placeholder="Digite o CEP (ex: 01001000)" 
+                           class="flex-1 bg-gray-800 border border-gray-700 focus:border-blue-500 rounded-2xl px-6 py-4 text-lg outline-none">
+                    <button onclick="buscarCEP()" 
+                            class="bg-blue-600 hover:bg-blue-700 px-8 rounded-2xl font-medium text-lg">🔎 Buscar</button>
+                </div>
+                <div id="cep-result" class="mt-8 min-h-[120px]"></div>
+            </div>
+        </div>
+
+        <!-- SEÇÃO 2: PokéAPI -->
+        <div class="mb-20">
+            <div class="section-header text-white rounded-3xl px-8 py-6 flex items-center gap-4 mb-6">
+                <div class="text-4xl">🐾</div>
+                <div>
+                    <h2 class="text-3xl font-semibold">2. Pokémon Aleatório</h2>
+                    <p class="text-blue-200">API de Pokémon</p>
+                </div>
+            </div>
+            
+            <div class="bg-gray-900 rounded-3xl p-8">
+                <button onclick="carregarPokemon()" 
+                        class="mb-8 bg-gradient-to-r from-red-500 to-yellow-500 hover:from-red-600 hover:to-yellow-600 px-8 py-4 rounded-2xl font-semibold text-xl">
+                    🎲 Gerar Pokémon Aleatório
+                </button>
+                <div id="pokemon-result" class="min-h-[300px]"></div>
+            </div>
+        </div>
+
+        <!-- SEÇÃO 3: Random User -->
+        <div>
+            <div class="section-header text-white rounded-3xl px-8 py-6 flex items-center gap-4 mb-6">
+                <div class="text-4xl">👤</div>
+                <div>
+                    <h2 class="text-3xl font-semibold">3. Usuário Aleatório</h2>
+                    <p class="text-blue-200">API de criar pessoas fictícias</p>
+                </div>
+            </div>
+            
+            <div class="bg-gray-900 rounded-3xl p-8">
+                <button onclick="carregarUsuario()" 
+                        class="mb-8 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 px-8 py-4 rounded-2xl font-semibold text-xl">
+                    👥 Gerar Pessoa Aleatória
+                </button>
+                <div id="user-result" class="min-h-[300px]"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-gray-900 border-t border-gray-800 py-8 text-center text-gray-500 text-sm">
+        Site com pastas separadas • HTML + CSS + JavaScript
+    </footer>
+
+    <!-- JavaScript separado -->
+    <script src="script.js"></script>
+</body>
+</html>
